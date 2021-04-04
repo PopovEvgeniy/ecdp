@@ -28,7 +28,7 @@ void window_setup()
 
 void interface_setup()
 {
- Form1->Caption="EASY CD PLAYER 0.8.1";
+ Form1->Caption="EASY CD PLAYER 0.8.2";
  Form1->Button1->Caption="Play";
  Form1->Button2->Caption="Pause";
  Form1->Button3->Caption="Next";
@@ -73,11 +73,45 @@ void show_track()
 
 void show_time()
 {
-  unsigned long int time;
-  time=MCI_TMSF_MINUTE(Form1->MediaPlayer1->Position);
-  Form1->Label6->Caption=IntToStr(time);
-  time=MCI_TMSF_SECOND(Form1->MediaPlayer1->Position);
-  Form1->Label8->Caption=IntToStr(time);
+  unsigned long int current;
+  current=MCI_TMSF_MINUTE(Form1->MediaPlayer1->Position);
+  Form1->Label6->Caption=IntToStr(current);
+  current=MCI_TMSF_SECOND(Form1->MediaPlayer1->Position);
+  Form1->Label8->Caption=IntToStr(current);
+}
+
+void do_play()
+{
+ Form1->Timer1->Enabled=true;
+ Form1->MediaPlayer1->Play();
+}
+
+void do_pause()
+{
+ Form1->Timer1->Enabled=false;
+ Form1->MediaPlayer1->Pause();
+}
+
+void do_eject()
+{
+ Form1->Timer1->Enabled=false;
+ Form1->MediaPlayer1->Stop();
+ Form1->MediaPlayer1->Eject();
+}
+
+void go_next()
+{
+ Form1->Timer1->Enabled=true;
+ Form1->MediaPlayer1->Next();
+ Form1->MediaPlayer1->Play();
+}
+
+void go_back()
+{
+ Form1->Timer1->Enabled=true;
+ Form1->MediaPlayer1->Previous();
+ Form1->MediaPlayer1->Previous();
+ Form1->MediaPlayer1->Play();
 }
 
 //---------------------------------------------------------------------------
@@ -93,36 +127,27 @@ void __fastcall TForm1::FormCreate(TObject *Sender)
 //---------------------------------------------------------------------------
 void __fastcall TForm1::Button1Click(TObject *Sender)
 {
- Timer1->Enabled=true;
- MediaPlayer1->Play();
+ do_play();
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm1::Button2Click(TObject *Sender)
 {
- Timer1->Enabled=false;
- MediaPlayer1->Pause();
+ do_pause();
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm1::Button3Click(TObject *Sender)
 {
- Timer1->Enabled=true;
- MediaPlayer1->Next();
- MediaPlayer1->Play();
+ go_next();
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm1::Button4Click(TObject *Sender)
 {
- Timer1->Enabled=true;
- MediaPlayer1->Previous();
- MediaPlayer1->Previous();
- MediaPlayer1->Play();
+ go_back();
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm1::Button5Click(TObject *Sender)
 {
- Timer1->Enabled=false;
- MediaPlayer1->Stop();
- MediaPlayer1->Eject();
+ do_eject();
  label_setup();
 }
 //---------------------------------------------------------------------------
