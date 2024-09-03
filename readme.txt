@@ -1,8 +1,8 @@
                                               EASY CD PLAYER
 
-                                               Version 0.8.2.2
+                                               Version 0.8.2.3
 
-                                 This software made by Popov Evgeniy Alekseyevich
+                                 This software was made by Popov Evgeniy Alekseyevich
 
 System requirement
 
@@ -16,11 +16,11 @@ EASY CD PLAYER is a simple audio CD player for Microsoft Windows.
 
 License
 
-This program distributed under GNU GENERAL PUBLIC LICENSE.
+This program is distributed under GNU GENERAL PUBLIC LICENSE.
 
 Source code
 
-The code is included in source.zip archive. You need Turbo C++ 2006 Explorer to compile it.
+The code is included in the source.zip archive. You need Turbo C++ 2006 Explorer to compile it.
 
 Contact
 
@@ -29,6 +29,6 @@ You can send me a letter to tuzik87@inbox.ru.
 Version history
 
 0.1 — 0.7 — Internal builds.
-0.8 — Russian localization removed.
+0.8 — Russian localization is removed.
 0.8.1 — 0.8.2 — Small changes.
-0.8.2.1 — 0.8.2.2 — Documentation updated.
+0.8.2.1 — 0.8.2.3 — Documentation updated.
