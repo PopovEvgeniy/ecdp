@@ -1,6 +1,6 @@
                                               EASY CD PLAYER
 
-                                               Version 0.8.2.5
+                                               Version 0.8.2.6
 
                                  This software was made by Popov Evgeniy Alekseyevich
 
@@ -29,6 +29,6 @@ You can send me a letter at tuzik87@inbox.ru.
 Version history
 
 0.1-0.7: The internal builds.
-0.8: Russian localization is removed.
+0.8: Russian localization has been removed.
 0.8.1-0.8.2: The small changes.
-0.8.2.1-0.8.2.5: Documentation updated.
+0.8.2.1-0.8.2.6: The documentation has been updated.
