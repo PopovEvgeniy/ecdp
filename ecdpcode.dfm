@@ -18,7 +18,7 @@ object Form1: TForm1
   object Label1: TLabel
     Left = 8
     Top = 48
-    Width = 49
+    Width = 32
     Height = 13
     Caption = 'Label1'
   end
@@ -26,49 +26,49 @@ object Form1: TForm1
     Left = 96
     Top = 48
     Width = 32
-    Height = 25
+    Height = 13
     Caption = 'Label2'
   end
   object Label3: TLabel
     Left = 151
     Top = 48
     Width = 32
-    Height = 25
+    Height = 13
     Caption = 'Label3'
   end
   object Label4: TLabel
     Left = 199
     Top = 48
     Width = 32
-    Height = 25
+    Height = 13
     Caption = 'Label4'
   end
   object Label5: TLabel
     Left = 8
     Top = 88
-    Width = 120
+    Width = 32
     Height = 13
     Caption = 'Label5'
   end
   object Label6: TLabel
     Left = 165
     Top = 88
-    Width = 52
-    Height = 25
+    Width = 32
+    Height = 13
     Caption = 'Label6'
   end
   object Label7: TLabel
     Left = 223
     Top = 88
     Width = 32
-    Height = 25
+    Height = 13
     Caption = 'Label7'
   end
   object Label8: TLabel
     Left = 261
     Top = 88
-    Width = 40
-    Height = 25
+    Width = 32
+    Height = 13
     Caption = 'Label8'
   end
   object MediaPlayer1: TMediaPlayer
@@ -88,7 +88,7 @@ object Form1: TForm1
     OnClick = Button1Click
   end
   object Button2: TButton
-    Left = 112
+    Left = 116
     Top = 136
     Width = 81
     Height = 33

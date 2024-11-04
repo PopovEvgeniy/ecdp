@@ -1,6 +1,6 @@
                                               EASY CD PLAYER
 
-                                               Version 0.8.2.6
+                                               Version 0.8.3
 
                                  This software was made by Popov Evgeniy Alekseyevich
 
@@ -20,7 +20,7 @@ This program is distributed under GNU GENERAL PUBLIC LICENSE.
 
 Source code
 
-The code is included in the source.zip archive. You need Turbo C++ 2006 Explorer to compile it.
+The code is included in the source.zip archive. You need Turbo Delphi 2006 Explorer to compile it.
 
 Contact
 
@@ -32,3 +32,4 @@ Version history
 0.8: Russian localization has been removed.
 0.8.1-0.8.2: The small changes.
 0.8.2.1-0.8.2.6: The documentation has been updated.
+0.8.3: The program was totally rewritten.
