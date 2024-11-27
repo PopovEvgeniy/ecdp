@@ -1,7 +1,7 @@
 object Form1: TForm1
   Left = 192
   Top = 107
-  Caption = 'Form1'
+  Caption = 'EASY CD PLAYER'
   ClientHeight = 194
   ClientWidth = 536
   Color = clBtnFace
@@ -23,53 +23,11 @@ object Form1: TForm1
     Caption = 'Label1'
   end
   object Label2: TLabel
-    Left = 96
-    Top = 48
-    Width = 32
-    Height = 13
-    Caption = 'Label2'
-  end
-  object Label3: TLabel
-    Left = 151
-    Top = 48
-    Width = 32
-    Height = 13
-    Caption = 'Label3'
-  end
-  object Label4: TLabel
-    Left = 199
-    Top = 48
-    Width = 32
-    Height = 13
-    Caption = 'Label4'
-  end
-  object Label5: TLabel
     Left = 8
     Top = 88
     Width = 32
     Height = 13
-    Caption = 'Label5'
-  end
-  object Label6: TLabel
-    Left = 165
-    Top = 88
-    Width = 32
-    Height = 13
-    Caption = 'Label6'
-  end
-  object Label7: TLabel
-    Left = 223
-    Top = 88
-    Width = 32
-    Height = 13
-    Caption = 'Label7'
-  end
-  object Label8: TLabel
-    Left = 261
-    Top = 88
-    Width = 32
-    Height = 13
-    Caption = 'Label8'
+    Caption = 'Label2'
   end
   object MediaPlayer1: TMediaPlayer
     Left = 8
@@ -83,7 +41,7 @@ object Form1: TForm1
     Top = 136
     Width = 81
     Height = 33
-    Caption = 'Button1'
+    Caption = 'Play'
     TabOrder = 1
     OnClick = Button1Click
   end
@@ -92,7 +50,7 @@ object Form1: TForm1
     Top = 136
     Width = 81
     Height = 33
-    Caption = 'Button2'
+    Caption = 'Pause'
     TabOrder = 2
     OnClick = Button2Click
   end
@@ -101,7 +59,7 @@ object Form1: TForm1
     Top = 136
     Width = 73
     Height = 33
-    Caption = 'Button3'
+    Caption = 'Next'
     TabOrder = 3
     OnClick = Button3Click
   end
@@ -110,7 +68,7 @@ object Form1: TForm1
     Top = 136
     Width = 73
     Height = 33
-    Caption = 'Button4'
+    Caption = 'Back'
     TabOrder = 4
     OnClick = Button4Click
   end
@@ -119,7 +77,7 @@ object Form1: TForm1
     Top = 136
     Width = 73
     Height = 33
-    Caption = 'Button5'
+    Caption = 'Eject'
     TabOrder = 5
     OnClick = Button5Click
   end

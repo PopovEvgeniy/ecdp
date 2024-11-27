@@ -1,6 +1,6 @@
                                               EASY CD PLAYER
 
-                                               Version 0.8.3
+                                               Version 0.8.5
 
                                  This software was made by Popov Evgeniy Alekseyevich
 
@@ -33,3 +33,4 @@ Version history
 0.8.1-0.8.2: The small changes.
 0.8.2.1-0.8.2.6: The documentation has been updated.
 0.8.3: The program was totally rewritten.
+0.8.4-0.8.5: The small changes.

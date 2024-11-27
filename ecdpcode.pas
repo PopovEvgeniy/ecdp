@@ -15,12 +15,6 @@ type
     Button5: TButton;
     Label1: TLabel;
     Label2: TLabel;
-    Label3: TLabel;
-    Label4: TLabel;
-    Label5: TLabel;
-    Label6: TLabel;
-    Label7: TLabel;
-    Label8: TLabel;
     Timer1: TTimer;
     MediaPlayer1: TMediaPlayer;
     procedure FormCreate(Sender: TObject);
@@ -47,45 +41,32 @@ implementation
 procedure device_setup();
 begin
  Form1.MediaPlayer1.Visible:=false;
- Form1.MediaPlayer1.DeviceType:= dtCDAudio;
+ Form1.MediaPlayer1.DeviceType:=dtCDAudio;
  Form1.MediaPlayer1.TimeFormat:=tfTMSF;
  Form1.MediaPlayer1.Notify:=false;
  Form1.MediaPlayer1.AutoOpen:=false;
  Form1.MediaPlayer1.Open();
 end;
 
-
 procedure window_setup();
 begin
+ Application.Title:='EASY CD PLAYER';
+ Form1.Caption:='EASY CD PLAYER 0.8.5';
  Form1.Font.Name:='Tahoma';
  Form1.Font.Size:= 14;
  Form1.BorderStyle:=bsDialog;
 end;
 
-
 procedure interface_setup();
 begin
- Form1.Caption:='EASY CD PLAYER 0.8.3';
  Form1.Button1.Caption:='Play';
  Form1.Button2.Caption:='Pause';
  Form1.Button3.Caption:='Next';
  Form1.Button4.Caption:='Back';
  Form1.Button5.Caption:='Eject';
- Form1.Label1.Caption:='Tape:';
- Form1.Label5.Caption:='Elapsed time:';
+ Form1.Label1.Caption:='';
+ Form1.Label2.Caption:='';
 end;
-
-
-procedure label_setup();
-begin
- Form1.Label3.Caption:='/';
- Form1.Label2.Caption:=' ';
- Form1.Label4.Caption:=' ';
- Form1.Label7.Caption:=':';
- Form1.Label6.Caption:=' ';
- Form1.Label8.Caption:=' ';
-end;
-
 
 procedure timer_setup();
 begin
@@ -93,98 +74,62 @@ begin
  Form1.Timer1.Enabled:=false;
 end;
 
-
 procedure setup();
 begin
  device_setup();
  window_setup();
  interface_setup();
- label_setup();
  timer_setup();
 end;
-
 
 procedure show_track();
 var track:LongWord;
 begin
  track:=MCI_TMSF_TRACK(Form1.MediaPlayer1.Position);
- Form1.Label2.Caption:=IntToStr(track);
- Form1.Label4.Caption:=IntToStr(Form1.MediaPlayer1.Tracks);
+ Form1.Label1.Caption:=IntToStr(track)+'\'+IntToStr(Form1.MediaPlayer1.Tracks);
 end;
-
 
 procedure show_time();
-var current:LongWord;
+var minutes,seconds:LongWord;
 begin
-  current:=MCI_TMSF_MINUTE(Form1.MediaPlayer1.Position);
-  Form1.Label6.Caption:=IntToStr(current);
-  current:=MCI_TMSF_SECOND(Form1.MediaPlayer1.Position);
-  Form1.Label8.Caption:=IntToStr(current);
-end;
-
-
-procedure do_play();
-begin
- Form1.Timer1.Enabled:=true;
- Form1.MediaPlayer1.Play();
-end;
-
-
-procedure do_pause();
-begin
- Form1.Timer1.Enabled:=false;
- Form1.MediaPlayer1.Pause();
-end;
-
-
-procedure do_eject();
-begin
- Form1.Timer1.Enabled:=false;
- Form1.MediaPlayer1.Stop();
- Form1.MediaPlayer1.Eject();
-end;
-
-
-procedure go_next();
-begin
- Form1.Timer1.Enabled:=true;
- Form1.MediaPlayer1.Next();
- Form1.MediaPlayer1.Play();
-end;
-
-
-procedure go_back();
-begin
- Form1.Timer1.Enabled:=true;
- Form1.MediaPlayer1.Previous();
- Form1.MediaPlayer1.Previous();
- Form1.MediaPlayer1.Play();
+  minutes:=MCI_TMSF_MINUTE(Form1.MediaPlayer1.Position);
+  seconds:=MCI_TMSF_SECOND(Form1.MediaPlayer1.Position);
+  Form1.Label2.Caption:=IntToStr(minutes)+':'+IntToStr(seconds);
 end;
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
- do_play();
+ Form1.Timer1.Enabled:=True;
+ Form1.MediaPlayer1.Play();
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
 begin
- do_pause();
+ Form1.Timer1.Enabled:=False;
+ Form1.MediaPlayer1.Pause();
 end;
 
 procedure TForm1.Button3Click(Sender: TObject);
 begin
- go_next();
+ Form1.Timer1.Enabled:=True;
+ Form1.MediaPlayer1.Next();
+ Form1.MediaPlayer1.Play();
 end;
 
 procedure TForm1.Button4Click(Sender: TObject);
 begin
- go_back();
+ Form1.Timer1.Enabled:=True;
+ Form1.MediaPlayer1.Previous();
+ Form1.MediaPlayer1.Play();
 end;
 
 procedure TForm1.Button5Click(Sender: TObject);
 begin
- do_eject();
- label_setup();
+ Form1.Timer1.Enabled:=False;
+ Form1.MediaPlayer1.Stop();
+ Form1.MediaPlayer1.Eject();
+ Form1.Label1.Caption:='';
+ Form1.Label2.Caption:='';
 end;
 
 procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
