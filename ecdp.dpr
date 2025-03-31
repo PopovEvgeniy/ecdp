@@ -2,12 +2,12 @@ program ecdp;
 
 uses
   Forms,
-  ecdpcode in 'ecdpcode.pas' {Form1};
+  ecdpcode in 'ecdpcode.pas' {MainWindow};
 
 {$R *.res}
 
 begin
   Application.Initialize;
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TMainWindow, MainWindow);
   Application.Run;
 end.

@@ -1,18 +1,18 @@
-                                              EASY CD PLAYER
+                                              Easy CD player
 
-                                               Version 0.8.5
+                                               Version 0.9
 
                                  This software was made by Popov Evgeniy Alekseyevich
 
 System requirements
 
-Windows XP or higher.
+Windows 95 or higher.
 Any CD-ROM.
 Any sound card.
 
 Program description
 
-EASY CD PLAYER is a simple audio CD player for Microsoft Windows.
+This program is a simple audio CD player for Microsoft Windows.
 
 License
 
@@ -33,4 +33,4 @@ Version history
 0.8.1-0.8.2: The small changes.
 0.8.2.1-0.8.2.6: The documentation has been updated.
 0.8.3: The program was totally rewritten.
-0.8.4-0.8.5: The small changes.
+0.8.4-0.9: The small changes.

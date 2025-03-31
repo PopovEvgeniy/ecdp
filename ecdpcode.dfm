@@ -1,9 +1,9 @@
-object Form1: TForm1
+object MainWindow: TMainWindow
   Left = 192
   Top = 107
-  Caption = 'EASY CD PLAYER'
-  ClientHeight = 194
-  ClientWidth = 536
+  Caption = 'Easy CD player'
+  ClientHeight = 133
+  ClientWidth = 454
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,74 +15,67 @@ object Form1: TForm1
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
-  object Label1: TLabel
+  object MusicStatus: TLabel
     Left = 8
     Top = 48
-    Width = 32
+    Width = 58
     Height = 13
-    Caption = 'Label1'
+    Caption = 'MusicStatus'
   end
-  object Label2: TLabel
-    Left = 8
-    Top = 88
-    Width = 32
-    Height = 13
-    Caption = 'Label2'
-  end
-  object MediaPlayer1: TMediaPlayer
+  object CDPlayer: TMediaPlayer
     Left = 8
     Top = 8
     Width = 253
     Height = 20
     TabOrder = 0
   end
-  object Button1: TButton
+  object PlayButton: TButton
     Left = 8
-    Top = 136
+    Top = 88
     Width = 81
     Height = 33
     Caption = 'Play'
     TabOrder = 1
-    OnClick = Button1Click
+    OnClick = PlayButtonClick
   end
-  object Button2: TButton
-    Left = 116
-    Top = 136
+  object PauseButton: TButton
+    Left = 95
+    Top = 88
     Width = 81
     Height = 33
     Caption = 'Pause'
     TabOrder = 2
-    OnClick = Button2Click
+    OnClick = PauseButtonClick
   end
-  object Button3: TButton
-    Left = 217
-    Top = 136
+  object NextButton: TButton
+    Left = 182
+    Top = 88
     Width = 73
     Height = 33
     Caption = 'Next'
     TabOrder = 3
-    OnClick = Button3Click
+    OnClick = NextButtonClick
   end
-  object Button4: TButton
-    Left = 313
-    Top = 136
+  object BackButton: TButton
+    Left = 261
+    Top = 88
     Width = 73
     Height = 33
     Caption = 'Back'
     TabOrder = 4
-    OnClick = Button4Click
+    OnClick = BackButtonClick
   end
-  object Button5: TButton
-    Left = 416
-    Top = 136
+  object EjectButton: TButton
+    Left = 340
+    Top = 88
     Width = 73
     Height = 33
     Caption = 'Eject'
     TabOrder = 5
-    OnClick = Button5Click
+    OnClick = EjectButtonClick
   end
-  object Timer1: TTimer
-    OnTimer = Timer1Timer
+  object Timer: TTimer
+    OnTimer = TimerTimer
     Left = 272
     Top = 8
   end
